@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Document</title>	
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet"> 	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header-title-block">
+				<h1 class="header-title">Кирилл Татаринцев</h1>
+				<p class="header-description">Front-end developer</p>
+			</div>
+			<img src="images/photo.png" class="header-photo"></img>
+		</header>
+		<main class="main">	
+			<div class="main-wrapper">
+				<ul class="main-menu-list">
+				<li><a href="#home" class="main-menu-link main-menu-link_active">Главная</a></li>
+				<li><a href="#portfolio" class="main-menu-link">Портфолио</a></li>
+				<li><a href="#contact" class="main-menu-link">Контакты</a></li>					
+			</ul>			
+			<div class="page-body">
+				<section class="page home-page page__active" id="home">
+					<h2 class="section-title">Главная</h2>
+					<div class="section-content">	
+						<div class="section-content-left">
+							<div class="education-block">
+								<h3 class="content-title">
+									<i class="fas fa-graduation-cap content-title-icon"></i>
+									Образование
+								</h3>
+								<div class="education-text education-1">
+									<h4 class="institution">Донбасская государственная машиностроительная академия</h4>
+									<p>Степень: Бакалавр.</p>
+									<p>Специальность: Компьютерные науки.</p>								
+								</div>
+								<div class="education-text education-2">
+									<h4 class="institution">Донбасская государственная машиностроительная академия</h4>
+									<p>Степень: Магистр.</p>
+									<p>Специальность: Компьютерные науки.</p>
+								</div>
+							</div>							
+							<!-- А так как мои знания каждый день совершенствуются, то он всегда будет дополняться, преобразовываться и улучшаться.Быть веб-разработчиком непросто. Каждый день правится документация по тому или другому языку, фреймворку или стандартам веба. Поэтому необходимо постоянно обучаться и адаптироваться к новым технологиям. -->
+						</div>
+						<div class="section-content-right">
+							<div class="self-education-block">
+								<h3 class="content-title">									
+									<i class="fas fa-book content-title-icon"></i>
+									Самообразование
+								</h3>
+								<div class="self-education-text">
+									<p>Постоянное повышение уровня знаний в области современных тенденций веб-разработки. Изучение видеокурсов и дополнительной литературы.</p>
+								</div>
+							</div>
+							<div class="skils-block">
+								<h3 class="content-title">									
+								<i class="far fa-lightbulb content-title-icon"></i>
+									Знания и навыки
+								</h3>
+								<ul class="skils-list">
+									<li class="skils-item">Все необходимые для верстальщика навыки работы с Photoshop</li>
+									<li class="skils-item">Уверенные знания JavaScript (базовые ES6), jQuery</li>
+									<li class="skils-item">Высокий уровнем знаний HTML/HTML5, каскадных таблиц CSS/CSS3</li>
+									<li class="skils-item">Использование технологии Flex, Grid</li>						
+									<li class="skils-item">Знания БЭМ, LESS, Bootstrap,  Wordpress</li>	
+								</ul>	
+							</div>	
+						</div>
+					</div>	
+					<div class="section-content-bottom">
+						<ul class="progress-list">
+								<li class="progress-item">
+									<svg width="110" height="110">
+										<circle class="progress-circle" fill="transparent" r="50" cx="55" cy="55">95</circle>
+									</svg>
+									<h3 class="progress-title">HTML5</h3>
+								</li>
+								<li class="progress-item">
+									<svg width="110" height="110">
+										<circle class="progress-circle" fill="transparent" r="50" cx="55" cy="55">90</circle>
+									</svg>
+									<h3 class="progress-title">CSS3</h3>
+								</li>
+								<li class="progress-item">
+									<svg width="110" height="110">
+										<circle class="progress-circle" fill="transparent" r="50" cx="55" cy="55">89</circle>
+									</svg>
+									<h3 class="progress-title">J-Query</h3>
+								</li>	
+								<li class="progress-item">
+									<svg width="110" height="110">
+										<circle class="progress-circle" fill="transparent" r="50" cx="55" cy="55">85</circle>
+									</svg>
+									<h3 class="progress-title">Wordpress</h3>
+								</li>		
+							</ul>
+					</div>							
+				</section>
+				<section class="page portfolio-page" id="portfolio">
+					<h2 class="section-title">Портфолио</h2>
+					
+				</section>
+				<section class="page contact-page" id="contact">
+					<h2 class="section-title">Контакты</h2>
+						<div class="section-content">								
+							<div class="section-content-left">
+
+								<h3 class="content-title">
+									<i class="fas fa-address-book content-title-icon"></i>
+									Контакты
+								</h3>
+								<!-- <h3 class="contact-block__title">Контакты</h3> -->
+								<p class="contact-block__text">Свяжитесь со мной любым удобным для Вас способом.</p>
+								<p class="contact-block__email"><a href="mailto:ktatarintcev@gmail.com" id="mail">ktatarintcev@gmail.com<i class="contact-block__icon fas fa-envelope"></i></a></p>							
+								<p class="contact-block__skype"><a href="skype:kirilll113">Написать<i class="contact-block__icon fab fa-skype"></i></a></p>
+								<p class="contact-block__telegram"><a href="https://t.me/elv1ns" target="_blank">Написать<i class="contact-block__icon fab fa-telegram"></i></a></p>								
+							</div>
+							<div class="section-content-right">
+								<form class="contact-form" method="POST"  action="https://formspree.io/ktatarintcev@gmail.com">
+									<div class="form-input-wrapper">
+										<input class="form-input form-input__name" type="text" name="name" placeholder="Ваше имя" autocomplete="off">
+										<div class="form-input__underlined"></div>	
+										<i class="form-input__icon fas fa-user"></i>
+										<div class="error-message name__error-message">Введите имя.</div>
+									</div>
+									<div class="form-input-wrapper">
+										<input class="form-input form-input__email" type="email" name="email" placeholder="Ваша почта" >
+										<div class="form-input__underlined"></div>
+										<i class="form-input__icon fas fa-envelope-open"></i>
+										<div class="error-message email__error-message">Введите корректный адрес электронной почты.</div>
+									</div>
+									<div class="form-input-wrapper">
+										<textarea class="form-textarea form-textarea__message" name="message" placeholder="Текст сообщения" ></textarea>
+										<div class="form-input__underlined"></div>
+										<i class="form-textarea__icon fas fa-comment"></i>
+										<div class="error-message message__error-message">Введите сообщение.</div>
+									</div>
+									<input type="hidden" name="_next" value="https://mysite.com/thanks.html"/>
+									<button class="form-button" type="submit">Отправить сообщение</button>
+								</form>
+							</div>							
+						</div>
+				</section>
+			</div>
+			</div>
+		</main>
+	</div>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="libs/jquery.rate.js"></script>
+	<script src="scripts/scripts.js"></script>	
+</body>
+</html>

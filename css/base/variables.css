@@ -1,0 +1,13 @@
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Oswald', sans-serif;
+  height: 100%;
+}
+.wrapper {
+  /* display: flex; */
+  height: 100%;
+  position: relative;
+}
+/*# sourceMappingURL=variables.css.map */
