@@ -781,7 +781,7 @@ website: http://nezhar.com
   border-left: 5px solid #eee;
   position: relative;
   background-color: #ffffff;
-  background-image: url(../../images/background.png);
+  background-image: url(images/background.png);
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 .main-wrapper {
