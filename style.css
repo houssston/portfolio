@@ -426,96 +426,6 @@ body {
   height: 100%;
   position: relative;
 }
-/* --------------------------------------------------------
-Style Sheet for jQuery Rate
-
-version: 0.2
-last modified: 12.03.2016
-author: Nezbeda Harald
-email: hn@nezhar.com
-website: http://nezhar.com
-----------------------------------------------------------*/
-.rate-circle-back,
-.rate-circle-front {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: auto !important;
-}
-.rate-circle-value {
-  font-style: normal;
-  font-weight: bold;
-  font-family: Arial;
-  position: relative;
-  z-index: 10;
-}
-.rate-color-back {
-  color: #e6e6e6;
-}
-.rate-color0,
-.rate-color1,
-.rate-color2 {
-  color: #ea5b0c;
-}
-.rate-color3,
-.rate-color4 {
-  color: #f28d4f;
-}
-.rate-color5,
-.rate-color6 {
-  color: #eedf14;
-}
-.rate-color7,
-.rate-color8 {
-  color: #f3b700;
-}
-.rate-color9,
-.rate-color10 {
-  color: #43cd34;
-}
-.rate-box-value {
-  position: absolute;
-  width: 100%;
-  font-weight: bold;
-  text-align: center;
-  color: #ffffff;
-}
-.rate-gradient0,
-.rate-gradient1,
-.rate-gradient2 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ea5b0c), to(#ea5b0c));
-  background-image: linear-gradient(to bottom, #ea5b0c 0%, #ea5b0c 100%);
-  background-repeat: repeat-x;
-  position: relative;
-}
-.rate-gradient3,
-.rate-gradient4 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f28d4f), to(#f28d4f));
-  background-image: linear-gradient(to bottom, #f28d4f 0%, #f28d4f 100%);
-  background-repeat: repeat-x;
-  position: relative;
-}
-.rate-gradient5,
-.rate-gradient6 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eedf14), to(#eedf14));
-  background-image: linear-gradient(to bottom, #eedf14 0%, #eedf14 100%);
-  background-repeat: repeat-x;
-  position: relative;
-}
-.rate-gradient7,
-.rate-gradient8 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f3b700), to(#f3b700));
-  background-image: linear-gradient(to bottom, #f3b700 0%, #f3b700 100%);
-  background-repeat: repeat-x;
-  position: relative;
-}
-.rate-gradient9,
-.rate-gradient10 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5ee450), to(#37c428));
-  background-image: linear-gradient(to bottom, #5ee450 0%, #37c428 100%);
-  background-repeat: repeat-x;
-  position: relative;
-}
 .progress-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -745,6 +655,278 @@ website: http://nezhar.com
     opacity: 1;
   }
 }
+.portfolio {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(14, 1fr);
+  grid-gap: 20px;
+}
+.portfolio-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 14px 2px #828282;
+          box-shadow: 0px 0px 14px 2px #828282;
+  position: relative;
+  overflow: hidden;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  margin: 5px;
+}
+.portfolio-item.medium {
+  grid-row: span 1;
+  grid-column: span 4;
+}
+.portfolio-item.large {
+  grid-row: span 2;
+  grid-column: span 6;
+}
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+}
+.portfolio-item__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e65959;
+}
+.portfolio-item-info {
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+          transform: rotate3d(1, 0, 0, 90deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: rgba(26, 188, 156, 0.7);
+}
+.in-top .portfolio-item-info {
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-animation: in-top 300ms ease 0ms 1 forwards;
+          animation: in-top 300ms ease 0ms 1 forwards;
+}
+.in-right .portfolio-item-info {
+  -webkit-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+  -webkit-animation: in-right 300ms ease 0ms 1 forwards;
+          animation: in-right 300ms ease 0ms 1 forwards;
+}
+.in-bottom .portfolio-item-info {
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-animation: in-bottom 300ms ease 0ms 1 forwards;
+          animation: in-bottom 300ms ease 0ms 1 forwards;
+}
+.in-left .portfolio-item-info {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-animation: in-left 300ms ease 0ms 1 forwards;
+          animation: in-left 300ms ease 0ms 1 forwards;
+}
+.out-top .portfolio-item-info {
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-animation: out-top 300ms ease 0ms 1 forwards;
+          animation: out-top 300ms ease 0ms 1 forwards;
+}
+.out-right .portfolio-item-info {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-animation: out-right 300ms ease 0ms 1 forwards;
+          animation: out-right 300ms ease 0ms 1 forwards;
+}
+.out-bottom .portfolio-item-info {
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-animation: out-bottom 300ms ease 0ms 1 forwards;
+          animation: out-bottom 300ms ease 0ms 1 forwards;
+}
+.out-left .portfolio-item-info {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-animation: out-left 300ms ease 0ms 1 forwards;
+          animation: out-left 300ms ease 0ms 1 forwards;
+}
+@-webkit-keyframes in-top {
+  from {
+    -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+            transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-top {
+  from {
+    -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+            transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes in-right {
+  from {
+    -webkit-transform: rotate3d(0, -1, 0, 90deg);
+            transform: rotate3d(0, -1, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-right {
+  from {
+    -webkit-transform: rotate3d(0, -1, 0, 90deg);
+            transform: rotate3d(0, -1, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes in-bottom {
+  from {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+            transform: rotate3d(1, 0, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-bottom {
+  from {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+            transform: rotate3d(1, 0, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes in-left {
+  from {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+            transform: rotate3d(0, 1, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-left {
+  from {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+            transform: rotate3d(0, 1, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes out-top {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(-1, 0, 0, 130deg);
+            transform: rotate3d(-1, 0, 0, 130deg);
+  }
+}
+@keyframes out-top {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(-1, 0, 0, 130deg);
+            transform: rotate3d(-1, 0, 0, 130deg);
+  }
+}
+@-webkit-keyframes out-right {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, -1, 0, 130deg);
+            transform: rotate3d(0, -1, 0, 130deg);
+  }
+}
+@keyframes out-right {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, -1, 0, 130deg);
+            transform: rotate3d(0, -1, 0, 130deg);
+  }
+}
+@-webkit-keyframes out-bottom {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(1, 0, 0, 130deg);
+            transform: rotate3d(1, 0, 0, 130deg);
+  }
+}
+@keyframes out-bottom {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(1, 0, 0, 130deg);
+            transform: rotate3d(1, 0, 0, 130deg);
+  }
+}
+@-webkit-keyframes out-left {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 130deg);
+            transform: rotate3d(0, 1, 0, 130deg);
+  }
+}
+@keyframes out-left {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 130deg);
+            transform: rotate3d(0, 1, 0, 130deg);
+  }
+}
 .header {
   width: 25%;
   height: 100%;
@@ -782,7 +964,6 @@ website: http://nezhar.com
   position: relative;
   background-color: #ffffff;
   background-image: url(../../images/background.png);
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 .main-wrapper {
   margin-left: -5px;
@@ -835,7 +1016,6 @@ website: http://nezhar.com
 .page {
   height: 0;
   width: 100%;
-  max-width: 1170px;
   position: absolute;
   opacity: 0;
   top: auto;

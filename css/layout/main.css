@@ -6,7 +6,6 @@
   position: relative;
   background-color: #ffffff;
   background-image: url(../../images/background.png);
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 .main-wrapper {
   margin-left: -5px;
@@ -59,7 +58,6 @@
 .page {
   height: 0;
   width: 100%;
-  max-width: 1170px;
   position: absolute;
   opacity: 0;
   top: auto;
