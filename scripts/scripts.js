@@ -8,8 +8,8 @@ $(document).ready(function(){
 	let mainMenu = $(".main-menu-list");
 	let errorUserName = false;	
 	let errorEmail = false;
-	let errorMessage = false;	
-	console.log(document.referrer);
+	let errorMessage = false;
+	
 	$('.form-input__name').focusout(function() {
 		checkUserName();		
 	});
