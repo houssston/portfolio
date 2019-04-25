@@ -7,8 +7,7 @@
 	<title>Document</title>	
 	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet"> 	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">	
-	<link rel="stylesheet" type="text/css" href="style.css">	
-	<link rel="stylesheet" type="text/css" href="libs/direction-reveal.css">	
+	<link rel="stylesheet" type="text/css" href="style.css">		
 </head>
 <body>
 	<div class="wrapper">
@@ -18,17 +17,21 @@
 				<p class="header-description">Front-end developer</p>
 			</div>
 			<img src="images/photo.png" class="header-photo"></img>
+			<button class="menu-toggle">				    		
+				<span></span>				    				    		   
+			</button>	
 		</header>
 		<main class="main">	
 			<div class="main-wrapper">
 				<ul class="main-menu-list">
-				<li><a href="#home" class="main-menu-link main-menu-link_active">Главная</a></li>
-				<li><a href="#portfolio" class="main-menu-link">Портфолио</a></li>
-				<li><a href="#contact" class="main-menu-link">Контакты</a></li>					
-			</ul>			
+					<li><a href="#home" class="main-menu-link main-menu-link_active">Главная</a></li>
+					<li><a href="#portfolio" class="main-menu-link">Портфолио</a></li>
+					<li><a href="#contact" class="main-menu-link">Контакты</a></li>					
+				</ul>			
 			<div class="page-body">
 				<section class="page home-page page__active" id="home">
 					<h2 class="section-title">Главная</h2>
+					<p class="about-text">Я приветствую Вас на своем личном сайте-портфолио. Этот сайт я сделал в рамках обучения. А так как мои знания каждый день совершенствуются, то он всегда будет дополняться, преобразовываться и улучшаться. На данный момент я ищу место, где смогу получить хорошие знания, невероятный опыт и отличную команду при работе над интересными проектами.</p>
 					<div class="section-content">	
 						<div class="section-content-left">
 							<div class="education-block">
@@ -46,18 +49,15 @@
 									<p>Степень: Магистр.</p>
 									<p>Специальность: Компьютерные науки.</p>
 								</div>
-							</div>							
-							<!-- А так как мои знания каждый день совершенствуются, то он всегда будет дополняться, преобразовываться и улучшаться.Быть веб-разработчиком непросто. Каждый день правится документация по тому или другому языку, фреймворку или стандартам веба. Поэтому необходимо постоянно обучаться и адаптироваться к новым технологиям. -->
+							</div>	
 						</div>
 						<div class="section-content-right">
 							<div class="self-education-block">
 								<h3 class="content-title">									
 									<i class="fas fa-book content-title-icon"></i>
 									Самообразование
-								</h3>
-								<div class="self-education-text">
-									<p>Постоянное повышение уровня знаний в области современных тенденций веб-разработки. Изучение видеокурсов и дополнительной литературы.</p>
-								</div>
+								</h3>								
+								<p class="self-education-text">Постоянное повышение уровня знаний в области современных тенденций веб-разработки. Изучение видеокурсов и дополнительной литературы.</p>								
 							</div>
 							<div class="skils-block">
 								<h3 class="content-title">									
@@ -108,35 +108,23 @@
 					<div class="section-content">
 						<div class="portfolio">
 							<div class="portfolio-item medium">								
-								<img src="images/1.png">
+								<i class="far fa-image portfolio-icon"></i>
 								<div class="portfolio-item-info">
-									<a href="#" class="portfolio-item__link">Посмотреть</a>
+									<a href="" class="portfolio-item__link disabled" target="_blank">Посмотреть</a>
 						   		</div>
 							</div> 
 							<div class="portfolio-item medium">								
 								<img src="images/1.png">
 								<div class="portfolio-item-info">
-									<a href="#" class="portfolio-item__link">Посмотреть</a>
+									<a href="https://houssston.github.io/oathJar/" class="portfolio-item__link" target="_blank">Посмотреть</a>
 						   		</div>
 						    </div> 
 							<div class="portfolio-item large">								
 								<img src="images/2.png">
 								<div class="portfolio-item-info">
-									<a href="#" class="portfolio-item__link">Посмотреть</a>
+									<a href="https://houssston.github.io/bazar/" class="portfolio-item__link" target="_blank">Посмотреть</a>
 						   		</div>
-							</div> 
-							<div class="portfolio-item medium">								
-								<img src="images/1.png">
-								<div class="portfolio-item-info">
-									<a href="#" class="portfolio-item__link">Посмотреть</a>
-						   		</div>
-						    </div> 
-							<div class="portfolio-item medium">								
-								<img src="images/1.png">
-								<div class="portfolio-item-info">
-									<a href="#" class="portfolio-item__link">Посмотреть</a>
-						   		</div>
-						    </div>  
+							</div> 							
 						</div> 
 					</div>
 				</section>
@@ -156,13 +144,13 @@
 							<div class="section-content-right">
 								<form class="contact-form" method="POST"  action="https://formspree.io/ktatarintcev@gmail.com">
 									<div class="form-input-wrapper">
-										<input class="form-input form-input__name" type="text" name="name" placeholder="Ваше имя" autocomplete="off">
+										<input class="form-input form-input__name" type="text" name="name" placeholder="Ваше имя">
 										<div class="form-input__underlined"></div>	
 										<i class="form-input__icon fas fa-user"></i>
 										<div class="error-message name__error-message">Введите имя.</div>
 									</div>
 									<div class="form-input-wrapper">
-										<input class="form-input form-input__email" type="email" name="email" placeholder="Ваша почта" >
+										<input class="form-input form-input__email" type="email" name="email" placeholder="Ваша почта">
 										<div class="form-input__underlined"></div>
 										<i class="form-input__icon fas fa-envelope-open"></i>
 										<div class="error-message email__error-message">Введите корректный адрес электронной почты.</div>
@@ -173,7 +161,7 @@
 										<i class="form-textarea__icon fas fa-comment"></i>
 										<div class="error-message message__error-message">Введите сообщение.</div>
 									</div>
-									<input type="hidden" name="_next" value="https://mysite.com/thanks.html"/>
+									<input type="hidden" name="_next" value="https://houssston.github.io/portfolio/"/>
 									<button class="form-button" type="submit">Отправить сообщение</button>
 								</form>
 							</div>							
@@ -183,10 +171,7 @@
 			</div>
 		</main>
 	</div>	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="libs/bundle.js"></script>
-	<!-- <script src="libs/direction-reveal.js"></script> -->
-	<!-- <script src="libs/main.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
 	<script src="scripts/scripts.js"></script>	
 </body>
 </html>

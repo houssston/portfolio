@@ -1,12 +1,15 @@
-$(document).ready(function(){	
+$(document).ready(function(){
+	/*console.clear();	*/
 	$('.name__error-message').hide();
 	$('.email__error-message').hide();
 	$('.message__error-message').hide();
 	let menuLink = $('.main-menu-link');
+	let menuToggle = $(".menu-toggle");
+	let mainMenu = $(".main-menu-list");
 	let errorUserName = false;	
 	let errorEmail = false;
 	let errorMessage = false;	
-
+	console.log(document.referrer);
 	$('.form-input__name').focusout(function() {
 		checkUserName();		
 	});
@@ -16,36 +19,93 @@ $(document).ready(function(){
 	$(".form-textarea__message").focusout(function() {
 		checkMessage();		
 	});
-
-	const nodes = [].slice.call(document.querySelectorAll('.portfolio-item'), 0);
-	const directions = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };
-	const classNames = ['in', 'out'].map(p => Object.values(directions).map(d => `${p}-${d}`)).reduce((a, b) => a.concat(b));
-
-	const getDirectionKey = (ev, node) => {
-		const { width, height, top, left } = node.getBoundingClientRect();
-		const l = ev.pageX - (left + window.pageXOffset);
-		const t = ev.pageY - (top + window.pageYOffset);		
+	$(".portfolio-item").hover(function(e){
+		var width = this.getBoundingClientRect().width;
+		var height = this.getBoundingClientRect().height;
+		var top = this.getBoundingClientRect().top;
+		var left = this.getBoundingClientRect().left;
+		const l = e.pageX - (left + window.pageXOffset);
+		const t = e.pageY - (top + window.pageYOffset);			
 		const x = (l - width / 2) * (width > height ? height / width : 1);
-		const y = (t - height / 2) * (height > width ? width / height : 1);		
+		const y = (t - height / 2) * (height > width ? width / height : 1);	
+		var direction = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
 		
-		return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
-	};
-	class Item {
-		constructor(element) {
-			this.element = element;
-			this.element.addEventListener('mouseover', ev => this.update(ev, 'in'));
-			this.element.addEventListener('mouseout', ev => this.update(ev, 'out'));
-	}
+		let check = $(this).is('[class*="in-"]');
 
-	update(ev, prefix) {
-		this.element.classList.remove(...classNames);
-		this.element.classList.add(`${prefix}-${directions[getDirectionKey(ev, this.element)]}`);
-	}}
-	nodes.forEach(node => new Item(node));
+		
+		switch (direction) 
+		{
+		case 0: 
+		if(!check){
+			/*$(this).remove('[class*="in-"]');*/
+			$(this).removeClass (function (index, css) {
+			   return (css.match (/(^|\s)out-\S+/g) || []).join(' ');
+			});
+			$(this).addClass('in-top');
+			
+		}
+		else{			
+			$(this).addClass('out-top');
+			/*$(this).replace('[class*="in-"]');*/
+			$(this).removeClass (function (index, css) {
+			   return (css.match (/(^|\s)in-\S+/g) || []).join(' ');
+			});
+		}		
+			
+		break;
 
-	setTimeout(setProgress,500);
+		case 1: 
+			if(!check){
+				$(this).removeClass (function (index, css) {
+			   return (css.match (/(^|\s)out-\S+/g) || []).join(' ');
+				});
+			$(this).addClass('in-right');
+			}
+			else{	
+				$(this).addClass('out-right');
+				$(this).removeClass (function (index, css) {
+			   return (css.match (/(^|\s)in-\S+/g) || []).join(' ');
+				});
+			}
+		break;
+
+		case 2:
+			if(!check){
+				$(this).removeClass (function (index, css) {
+			   return (css.match (/(^|\s)out-\S+/g) || []).join(' ');
+				});
+			$(this).addClass('in-bottom');
+			}
+			else{	
+				$(this).addClass('out-bottom');
+				$(this).removeClass (function (index, css) {
+			   return (css.match (/(^|\s)in-\S+/g) || []).join(' ');
+				});
+			}
+		break;
+
+		case 3: 
+			if(!check){
+				$(this).removeClass (function (index, css) {
+			   return (css.match (/(^|\s)out-\S+/g) || []).join(' ');
+				});
+			$(this).addClass('in-left');
+			}
+			else{	
+				$(this).addClass('out-left');
+				$(this).removeClass (function (index, css) {
+			   return (css.match (/(^|\s)in-\S+/g) || []).join(' ');
+				});
+			}
+		break;
+		}
+	});
+
+	setTimeout(setProgress,300);
 	pageTransition();	
 	formValidation();
+	activateMenu();
+	deactivateMenu();
 	
 	function pageTransition(){
 		menuLink.click(function(event){
@@ -126,5 +186,23 @@ $(document).ready(function(){
 			errorMessage = true;
 			$('.message__error-message').fadeIn(1000);		
 		}
+	}	
+	function activateMenu(){
+		menuToggle.click(function(){
+			menuToggle.toggleClass('toggle__active');
+			mainMenu.toggleClass('main-menu__active');
+		})
+	}
+	function deactivateMenu(){
+		$(document).click(function (e){
+			if (!mainMenu.is(e.target) && mainMenu.has(e.target).length === 0 && !menuToggle.is(e.target) && menuToggle.has(e.target).length === 0) {
+				menuToggle.removeClass('toggle__active');
+				mainMenu.removeClass('main-menu__active');
+			}
+		});	
+		$('.main-menu-list li').click(function(){
+			menuToggle.removeClass('toggle__active');
+			mainMenu.removeClass('main-menu__active');
+		});	
 	}
 })

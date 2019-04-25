@@ -1,18 +1,27 @@
 .header {
-  width: 25%;
-  height: 100%;
+  width: 100%;
+  height: auto;
   position: fixed;
   background: #b6d0db;
-  min-height: 500px;
-}
-.header-title-block {
-  text-align: center;
+  min-height: auto;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
 }
 .header-title {
   margin: 40px 0 20px;
   color: #fff;
   font-size: 40px;
   font-weight: 400;
+  display: none;
 }
 .header-description {
   color: #fff;
@@ -26,5 +35,6 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  display: none;
 }
 /*# sourceMappingURL=header.css.map */

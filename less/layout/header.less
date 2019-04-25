@@ -1,18 +1,24 @@
 .header{
-	width: 25%;
-	height: 100%;
+	width: 100%;
+	height: auto;
 	position: fixed;
 	background: #b6d0db;
-	min-height: 500px;	
+	min-height: auto;
+	z-index: 3;	
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	padding: 10px;
 }
 .header-title-block{
-	text-align: center;
+	
 }
 .header-title{
 	margin: 40px 0 20px;
 	color: #fff;
 	font-size: 40px;
-	font-weight: 400;		
+	font-weight: 400;
+	display: none;					
 }
 .header-description{
 	color: #fff;
@@ -25,4 +31,5 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	display: none;
 }

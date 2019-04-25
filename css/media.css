@@ -1,2 +1,118 @@
-
+@media (min-width: 480px) {
+  .portfolio-item.medium {
+    grid-row: span 2;
+    grid-column: span 7;
+  }
+  .portfolio-item:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    width: 25%;
+    height: 100%;
+    min-height: 500px;
+    display: block;
+    padding: 0;
+  }
+  .header-photo {
+    display: block;
+  }
+  .header-title {
+    display: block;
+  }
+  .header-title-block {
+    text-align: center;
+    padding: 10px;
+  }
+  .main {
+    top: 0;
+    width: 75%;
+    margin-left: auto;
+    border-left: 5px solid #eee;
+  }
+  .main-wrapper {
+    margin-left: -5px;
+  }
+  .main-menu-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: transparent;
+    padding: 30px 70px;
+    width: auto;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    position: static;
+    margin-top: 0;
+  }
+  .main-menu-list li {
+    padding: 10px 15px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .section-title {
+    margin-left: -24px;
+  }
+  .section-title:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    -webkit-transform: skew(0deg, 65deg);
+            transform: skew(0deg, 65deg);
+    background: #cc5050;
+  }
+  .page {
+    padding: 0 30px 50px;
+  }
+  .section-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 0;
+  }
+  .section-content-left {
+    width: 50%;
+    padding: 0 15px 0 0;
+    margin-bottom: 0;
+  }
+  .section-content-right {
+    width: 50%;
+    padding: 0 0 0 15px;
+  }
+  .progress-item {
+    margin-bottom: 0;
+  }
+  .content-title {
+    margin-top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .page {
+    padding: 0 70px 50px;
+  }
+  .section-title {
+    margin-left: -65px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio-item.medium {
+    grid-row: span 1;
+    grid-column: span 4;
+  }
+  .portfolio-item.large {
+    grid-row: span 2;
+    grid-column: span 6;
+  }
+}
 /*# sourceMappingURL=media.css.map */
