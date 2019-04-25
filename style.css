@@ -1154,7 +1154,7 @@ body {
   top: 42px;
   height: 100%;
   background-color: #ffffff;
-  background-image: url(../../images/background.png);
+  background-image: url(images/background.png);
 }
 .main-wrapper {
   position: relative;
